@@ -1,0 +1,358 @@
+header {
+  display: flex;
+  justify-content: space-around;
+  gap: 80vh;
+  align-items: center;
+  padding: 10px 40px;
+}
+
+.p-img {
+  display: flex;
+  align-items: center;
+}
+
+p {
+  font-size: 3rem;
+  margin: 0;
+  font-family: "Tahoma";
+}
+
+.img-header {
+  width: 10rem;
+}
+
+.btn {
+  font-family: "Tahoma";
+  font-size: 2rem;
+  text-decoration: none;
+  text-align: 10px;
+  margin-right: 30px;
+  color: purple;
+  background-color: white;
+  transition: all 1s;
+  text-box: inherit;
+  border: none;
+  border-radius: 50px;
+  padding: 10px 17px;
+  display: inline-block;
+}
+
+.btn:hover {
+  color: white;
+  background-color: rgb(250, 0, 179);
+  text-shadow: 10vh;
+  box-shadow: 0px 10px 20px rgba(250, 0, 179, 0.4);
+}
+
+.btn1 {
+  font-family: "Tahoma";
+  font-size: 2rem;
+  text-decoration: none;
+  text-align: 10px;
+  margin-right: 30px;
+  color: purple;
+  background-color: white;
+  transition: all 1s;
+  text-box: inherit;
+  border: none;
+  border-radius: 50px;
+  padding: 10px 17px;
+  display: inline-block;
+}
+
+.btn1:hover {
+  color: white;
+  background-color: rgb(250, 0, 179);
+  text-shadow: 10vh;
+  box-shadow: 0px 10px 20px rgba(250, 0, 179, 0.4);
+}
+
+.btn2 {
+  font-family: "Tahoma";
+  font-size: 2rem;
+  text-decoration: none;
+  text-align: 10px;
+  margin-right: 30px;
+  color: purple;
+  background-color: white;
+  transition: all 1s;
+  text-box: inherit;
+  border: none;
+  border-radius: 50px;
+  padding: 10px 17px;
+  display: inline-block;
+}
+
+.btn2:hover {
+  color: white;
+  background-color: rgb(250, 0, 179);
+  text-shadow: 10vh;
+  box-shadow: 0px 10px 20px rgba(250, 0, 179, 0.4);
+}
+
+.p-Description {
+  font-family: Tahoma;
+  font-size: 5rem;
+  color: purple;
+  padding-top: 20vh;
+  padding-left: 52vh;
+}
+.btn3 {
+  text-decoration: none;
+  font-size: 2vh;
+  display: block;
+  width: fit-content;
+  margin: 0 auto;
+  text-align: center;
+  padding: 15px 40px;
+  border-radius: 50px;
+  border: none;
+  color: white;
+  background-color: purple;
+  transition: all 1s;
+  text-box: inherit;
+  font-family: Tahoma;
+}
+
+.btn3:hover {
+  color: white;
+  background-color: rgb(250, 0, 179);
+  text-shadow: 10vh;
+  box-shadow: 0px 10px 20px rgba(250, 0, 179, 0.4);
+}
+
+.bubble-bg {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.bubble {
+  position: absolute;
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  background: #d77fa7;
+  opacity: 0.55;
+  animation: floatBubble 7s ease-in-out infinite alternate;
+  will-change: transform;
+}
+
+/* Circle positions */
+.bubble-1 {
+  width: 140px;
+  height: 140px;
+  top: 16%;
+  left: 6%;
+  animation-delay: -2s;
+}
+
+.bubble-2 {
+  top: 20%;
+  right: 8%;
+  animation-delay: -5s;
+}
+
+.bubble-3 {
+  top: 34%;
+  left: 45%;
+  animation-delay: -3s;
+}
+
+.bubble-4 {
+  top: 53%;
+  left: 10%;
+  animation-delay: -6s;
+}
+
+.bubble-5 {
+  top: 55%;
+  right: 17%;
+  animation-delay: -1s;
+}
+
+.bubble-6 {
+  bottom: 5%;
+  left: 43%;
+  animation-delay: -4s;
+}
+
+.bubble-7 {
+  top: 75%;
+  left: 3%;
+  animation-delay: -3.5s;
+}
+
+.bubble-8 {
+  bottom: 8%;
+  right: 5%;
+  animation-delay: -5.5s;
+}
+
+@keyframes floatBubble {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+
+  50% {
+    transform: translate(15px, -25px) scale(1.06);
+  }
+
+  100% {
+    transform: translate(-12px, 15px) scale(0.96);
+  }
+}
+
+body > *:not(.bubble-bg) {
+  position: relative;
+  z-index: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .bubble {
+    animation: none;
+  }
+}
+
+/* جلوگیری از بیرون زدن محتوا */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* اصلاح هدر */
+header {
+  justify-content: space-between;
+  gap: 25px;
+  padding: 10px 4%;
+}
+
+.p-img {
+  min-width: 0;
+}
+
+.p-img p {
+  font-size: clamp(1.3rem, 2.5vw, 3rem);
+}
+
+.img-header {
+  width: clamp(55px, 8vw, 160px);
+  height: auto;
+}
+
+header > div:last-child {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.btn,
+.btn1,
+.btn2 {
+  margin-right: 0;
+  font-size: clamp(1rem, 1.5vw, 2rem);
+  white-space: nowrap;
+}
+
+.p-Description {
+  padding: 0;
+  margin: 18vh 20px 40px;
+  text-align: center;
+  font-size: clamp(2rem, 5vw, 5rem);
+  overflow-wrap: anywhere;
+}
+
+.btn3 {
+  font-size: clamp(1rem, 1.5vw, 1.3rem);
+  margin: 0 auto;
+}
+
+.bubble-bg {
+  z-index: 0;
+}
+
+.bubble {
+  z-index: 0;
+}
+
+/* تبلت */
+@media (max-width: 900px) {
+  header {
+    gap: 20px;
+    padding: 15px 3%;
+  }
+
+  .img-header {
+    width: 65px;
+  }
+
+  header > div:last-child {
+    gap: 10px;
+  }
+
+  .p-Description {
+    margin-top: 15vh;
+  }
+}
+
+/* موبایل */
+@media (max-width: 600px) {
+  header {
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    padding: 15px 12px;
+  }
+
+  .p-img {
+    justify-content: center;
+  }
+
+  .p-img p {
+    font-size: clamp(1.2rem, 5vw, 2rem);
+  }
+
+  .img-header {
+    width: 55px;
+  }
+
+  header > div:last-child {
+    width: 100%;
+    gap: 8px;
+  }
+
+  .btn,
+  .btn1,
+  .btn2 {
+    font-size: clamp(0.8rem, 3.5vw, 1.1rem);
+    padding: 9px 12px;
+  }
+
+  .p-Description {
+    margin: 12vh 15px 35px;
+    font-size: clamp(1.8rem, 8vw, 2.8rem);
+  }
+
+  .btn3 {
+    padding: 12px 28px;
+  }
+
+  .bubble {
+    width: 75px;
+    height: 75px;
+  }
+
+  .bubble-1 {
+    width: 95px;
+    height: 95px;
+  }
+}
